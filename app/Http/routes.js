@@ -21,3 +21,4 @@ Route.on('/').render('welcome')
 
 Route.post('/images', 'ImageController.create')
 Route.get('/images', 'ImageController.show')
+Route.delete('/images/:id', 'ImageController.delete')
