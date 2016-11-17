@@ -8,6 +8,12 @@ class ImageController {
 
       response.json(image);
   }
+
+  * show (request, response) {
+      let images = yield Image.query()
+
+      response.json(images)
+  }
 }
 
 module.exports = ImageController
