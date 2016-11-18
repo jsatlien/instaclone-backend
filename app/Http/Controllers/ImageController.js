@@ -41,6 +41,17 @@ class ImageController {
     }
 
   }
+
+  * showSingle(request, response) {
+      let imageId = request.param('id')
+      let image = yield Image.findBy('id', imageId)
+
+      if (image) {
+        response.json(image)
+      } else {
+        response.json({ error: 'Image not found.' })
+      }
+    }
 }
 
 module.exports = ImageController
