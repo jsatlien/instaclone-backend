@@ -27,3 +27,4 @@ Route.patch('/images/:id', 'ImageController.update')
 Route.get('/images/:id', 'ImageController.showSingle')
 
 Route.post('/images/:id/comments', 'CommentController.create')
+Route.patch('/image/:id/comments/:comment_id', 'CommentController.update')

@@ -10,6 +10,10 @@ class CommentController {
 
     response.status(201).json(newComment)
   }
+
+  * update (request, reponse) {
+    
+  }
 }
 
 module.exports = CommentController
