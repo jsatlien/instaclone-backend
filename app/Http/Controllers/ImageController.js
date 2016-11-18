@@ -21,7 +21,7 @@ class ImageController {
       if (image) {
         let deleteImage = yield Image.query().where('id', imageId).del()
 
-        response.status(202).json('Image removed.')
+        response.status(202).json({})
       } else {
         response.status(404).json({error: 'Image not found.'})
       }
