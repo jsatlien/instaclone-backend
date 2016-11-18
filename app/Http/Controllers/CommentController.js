@@ -32,6 +32,20 @@ class CommentController {
     }
     console.log(newData)
   }
+
+  * delete (request, response) {
+    let commentId = request.param('comment_id')
+    let comment = yield Comment.findBy('id', commentId)
+
+    if (comment) {
+      yield comment.delete()
+      yield comment.save()
+
+      response.status(201).json(comment)
+    } else {
+      response.status(404).json({error: 'Comment not found.'})
+    }
+  }
 }
 
 module.exports = CommentController
