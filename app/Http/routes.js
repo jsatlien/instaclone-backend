@@ -25,3 +25,5 @@ Route.get('/images', 'ImageController.show')
 Route.delete('/images/:id', 'ImageController.delete')
 Route.patch('/images/:id', 'ImageController.update')
 Route.get('/images/:id', 'ImageController.showSingle')
+
+Route.post('/images/:id/comments', 'CommentController.create')
